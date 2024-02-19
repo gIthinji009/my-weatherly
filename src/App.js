@@ -4,6 +4,8 @@ import CurrentWeather from "./components/current-weather/currentweather.js";
 import Forecast from "./components/forecast/forecast.js";
 import { WEATHER_API_URL, WEATHER_API_KEY } from "./Api/api.js";
 import "./App.css";
+import DarkMode from "./components/DarkMode/DarkMode.js";
+
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
