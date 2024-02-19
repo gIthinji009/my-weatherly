@@ -2,9 +2,8 @@ import { useState } from "react";
 import Search from "./components/search/search.js";
 import CurrentWeather from "./components/current-weather/currentweather.js";
 import Forecast from "./components/forecast/forecast.js";
-import { WEATHER_API_URL, WEATHER_API_KEY } from "./api.js";
+import { WEATHER_API_URL, WEATHER_API_KEY } from "./Api/api.js";
 import "./App.css";
-
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
@@ -32,7 +31,10 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <div className="App">
+      <h1 className="App-header"></h1>
+      <DarkMode/>
+      
       <Search onSearchChange={handleOnSearchChange} />
       {currentWeather && <CurrentWeather data={currentWeather} />}
       {forecast && <Forecast data={forecast} />}
